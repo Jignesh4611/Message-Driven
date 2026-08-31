@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 var channel, connection;
 
 mongoose
-  .connect("mongodb://0.0.0.0:27017/order-service", {
+  .connect("mongodb://172.21.96.1:27017/order-service", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

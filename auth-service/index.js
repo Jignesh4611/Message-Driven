@@ -11,7 +11,7 @@ app.use('/auth', authRouter);
 
 
 mongoose.connect(
-    'mongodb://0.0.0.0:27017/auth-service',
+    'mongodb://172.21.96.1:27017/auth-service',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,

@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/products", productRouter);
 
 mongoose
-  .connect("mongodb://0.0.0.0:27017/product-service", {
+  .connect("mongodb://172.21.96.1:27017/product-service", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

@@ -1,0 +1,34 @@
+services : 
+  rabbitmq: 
+    image: rabbitmq:3-management
+    healthcheck: 
+      test: ["CMD","rabbitmq-diagnostics","-q","ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    ports : 
+      - "5672:5672"
+  auth-service: 
+    build: 
+      context : ./auth-service
+    image: jigs1234/auth-service-1:latest
+    ports:
+      - "3000:3000"
+  order-service:
+    depends_on :
+      rabbitmq : 
+        condition : service_healthy
+    build: 
+      context : ./order-service
+    image: jigs1234/auth-service-1:latest 
+    ports:
+      - "3002:3000"
+  product-service:
+    depends_on :
+      rabbitmq : 
+        condition : service_healthy
+    build: 
+      context : ./product-service
+    image: jigs1234/product-service-1:latest
+    ports:
+      -  "3001:3000"
