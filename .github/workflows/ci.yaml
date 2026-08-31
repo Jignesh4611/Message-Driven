@@ -2,9 +2,9 @@ name : Ecommerce
 on : 
     push : 
         branches:  
-            -main 
+            - main 
 jobs : 
-    build:
+    build: 
         runs-on :  ubuntu-latest 
         steps: 
 
