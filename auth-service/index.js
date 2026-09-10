@@ -1,3 +1,4 @@
+require("./instrumental")
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -7,8 +8,6 @@ const authRouter = require('./routes/auth');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/auth', authRouter);
-
-
 
 mongoose.connect(
     'mongodb://172.21.96.1:27017/auth-service',
