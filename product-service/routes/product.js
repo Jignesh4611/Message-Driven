@@ -1,7 +1,7 @@
 const Router = require("express").Router;
 const router = new Router();
 const Product = require("../models/Product");
-const auth = require("../../middleware/auth");
+const auth = require("../middleware/auth");
 const amqp = require("amqplib");
 
 var order, channel, connection;
