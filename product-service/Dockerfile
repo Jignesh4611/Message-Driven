@@ -15,4 +15,4 @@ COPY /middleware ./middleware
 COPY index.js .
 COPY instrumental.js .
 EXPOSE 3000
-CMD ["npm",start]
+CMD ["npm","start"]
