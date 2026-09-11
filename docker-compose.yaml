@@ -20,7 +20,7 @@ services :
         condition : service_healthy
     build: 
       context : ./order-service
-    image: jigs1234/auth-service-1:latest 
+    image: jigs1234/order-service-1:latest 
     ports:
       - "3002:3000"
   product-service:
