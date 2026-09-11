@@ -11,7 +11,7 @@ const {
 
 
 const metricExporter = new OTLPMetricExporter({
-  url: "http://my-opentelemetry-collector.monitoring.svc.cluster.local:4318/v1/metrics",
+  url: "http://my-opentelemetry-opentelemetry-collector.monitoring.svc.cluster.local:4318/v1/metrics",
 });
 
 const sdk = new NodeSDK({
