@@ -20,7 +20,7 @@ mongoose
 
 // RabbitMQ connection
 async function connectToRabbitMQ() {
-  const amqpServer = "amqp://guest:guest@localhost:5672";
+const amqpServer = "amqp://guest:guest@rabbitmq:5672";
   connection = await amqp.connect(amqpServer);
   channel = await connection.createChannel();
   await channel.assertQueue("order-service-queue");
