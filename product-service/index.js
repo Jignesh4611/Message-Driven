@@ -1,7 +1,7 @@
 require("./instrumental")
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const mongoose = require("mongoose");
 const productRouter = require("./routes/product");
 
